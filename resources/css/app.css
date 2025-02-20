@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .error{
     color: red;
 }
-.bg-error{
-    background-color: red;
+.gap{
+    gap: 5px;
 }

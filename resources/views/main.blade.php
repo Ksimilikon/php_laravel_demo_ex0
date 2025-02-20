@@ -4,6 +4,6 @@
 @endsection
 @section('main')
 <div class="">
-    border
+    main
 </div>
 @endsection

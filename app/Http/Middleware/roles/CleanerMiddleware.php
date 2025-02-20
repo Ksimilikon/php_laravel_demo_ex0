@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\roles;
 
 use App\Models\User;
 use Closure;
@@ -16,7 +16,7 @@ class CleanerMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (User::find(auth()->id)->role_id == 3){
+        if (auth()->user()->role_id == 3){
             return $next($request);
         }
         else{

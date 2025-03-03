@@ -78,7 +78,21 @@ Route::middleware(AuthMiddleware::class)->group(function (){
         //admin
         Route::get('/adminPanel', [AdminController::class, 'showPanel'])->name('adminPanel');
         Route::get('/adminPanel/control/rooms', [AdminController::class, 'showRooms'])->name('admin.control.rooms');
-        Route::get('/adminPanel/control/worker', [AdminController::class, 'showWorkers'])->name('admin.control.roles');
+        Route::get('/adminPanel/control/clients', [AdminController::class, 'showWorkers'])->name('admin.control.roles');
+        Route::get('/adminPanel/control/rooms/create', [AdminController::class, 'showCreateRoom'])->name('admin.control.rooms.create');
+        Route::post('adminPanel/control/rooms/create', [AdminController::class, 'createRoom'])->name('admin.control.rooms.create');
+
+        Route::get('adminPanel/control/rooms/{id}/edit', [AdminController::class, 'showEditRoom'])->name('admin.control.rooms.edit');
+        Route::put('adminPanel/control/rooms/{id}/edit', [AdminController::class, 'editRoom'])->name('admin.control.rooms.edit');
+        Route::delete('adminPanel/control/rooms/{id}/edit', [AdminController::class, 'destroyRoom'])->name('admin.control.rooms.destroy');
+
+        Route::get('/adminPanel/control/clients/{roleId}', [AdminController::class, 'showTypeClient'])->name('admin.control.clients.show');
+        Route::get('/adminPanel/control/client/{id}', [AdminController::class, 'showEditClient'])->name('admin.control.clients.edit');
+        Route::patch('/adminPanel/control/client/{id}', [AdminController::class, 'editClient'])->name('admin.control.client.edit');
+
+        Route::get('/adminPanel/create/role', [AdminController::class, 'showCreateRole'])->name('admin.create.role.show');
+        Route::post('/adminPanel/create/role', [AdminController::class, 'createRole'])->name('admin.create.role.create');
+
 
     });
     Route::middleware(CleanerMiddleware::class)->group(function (){

@@ -128,6 +128,7 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
             'Laravel\\Sail\\' => 13,
             'Laravel\\Prompts\\' => 16,
             'Laravel\\Pail\\' => 13,
+            'Laravel\\Breeze\\' => 15,
         ),
         'I' => 
         array (
@@ -336,8 +337,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -377,8 +378,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces',
-            1 => __DIR__ . '/..' . '/league/uri',
+            0 => __DIR__ . '/..' . '/league/uri',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -419,6 +420,10 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Laravel\\Pail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/pail/src',
+        ),
+        'Laravel\\Breeze\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/breeze/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -516,7 +521,22 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\GuestController' => __DIR__ . '/../..' . '/app/Http/Controllers/GuestController.php',
+        'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Middleware\\AuthMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AuthMiddleware.php',
+        'App\\Http\\Middleware\\GuestMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/GuestMiddleware.php',
+        'App\\Http\\Middleware\\roles\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/roles/AdminMiddleware.php',
+        'App\\Http\\Middleware\\roles\\CleanerMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/roles/CleanerMiddleware.php',
+        'App\\Http\\Middleware\\roles\\ServicePersonalMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/roles/ServicePersonalMiddleware.php',
+        'App\\Http\\Middleware\\roles\\UserMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/roles/UserMiddleware.php',
+        'App\\Models\\Booking' => __DIR__ . '/../..' . '/app/Models/Booking.php',
+        'App\\Models\\Categorie' => __DIR__ . '/../..' . '/app/Models/Categorie.php',
+        'App\\Models\\Money_flow' => __DIR__ . '/../..' . '/app/Models/Money_flow.php',
+        'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
+        'App\\Models\\Room' => __DIR__ . '/../..' . '/app/Models/Room.php',
+        'App\\Models\\Rooms_status_line' => __DIR__ . '/../..' . '/app/Models/Rooms_status_line.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -2853,6 +2873,12 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
+        'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
+        'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',
+        'Laravel\\Breeze\\Console\\InstallsBladeStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsBladeStack.php',
+        'Laravel\\Breeze\\Console\\InstallsInertiaStacks' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsInertiaStacks.php',
+        'Laravel\\Breeze\\Console\\InstallsLivewireStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsLivewireStack.php',
         'Laravel\\Pail\\Console\\Commands\\PailCommand' => __DIR__ . '/..' . '/laravel/pail/src/Console/Commands/PailCommand.php',
         'Laravel\\Pail\\Contracts\\Printer' => __DIR__ . '/..' . '/laravel/pail/src/Contracts/Printer.php',
         'Laravel\\Pail\\File' => __DIR__ . '/..' . '/laravel/pail/src/File.php',

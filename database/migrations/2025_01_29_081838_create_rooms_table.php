@@ -15,7 +15,8 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Categorie::class);
-            $table->integer("number");
+            $table->integer("number")->unique();
+            $table->integer('floor');
             $table->decimal("cost", 10, 2);
             $table->timestamps();
             $table->softDeletes();

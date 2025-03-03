@@ -10,6 +10,14 @@ class Categorie extends Model
 {
     use HasFactory;
     protected $table = "categories";
+    protected $fillable = [
+        'name',
+        
+    ];
+    protected $visible = [
+        'id',
+        'name'
+    ];
 
     public function Room():BelongsTo{
         return $this->belongsTo(Room::class);

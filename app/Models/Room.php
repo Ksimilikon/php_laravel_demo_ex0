@@ -17,6 +17,8 @@ class Room extends Model
     protected $fillable = [
         "number", 
         "cost",
+        'floor',
+        'categorie_id',
     ];
 
     public function Categorie() : HasOne {
